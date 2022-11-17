@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color:var(--color-veryDarkGray);
+    --color-red: hsl(0 78% 62%);
+    --color-cyan:hsl(180 62% 55%);
+    --color-orange: rgb(252, 175, 74);
+    --color-blue:hsl(212 86% 64%);
+    --color-veryDarkGray:hsl(234 12% 34%);
+    --color-GrayBlue:hsl(229 6% 66%);
+    --color-VeryLightGray:hsl(0 0% 98%);   
+}
+* html body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-color: var(--color-VeryLightGray);
+   width: 100%;
+   height: 100vh; 
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   flex-direction: column;
+}
+/*header*/
+header{
+    text-align: center;
+    width: 500px;
+} 
+header h1{
+    font-weight: 200;
+    margin-top: 70px;
+}
+header h2{
+    font-size: 30px;
+    margin-top: -30px;
+}
+
+main{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+     "a b c"
+     "a d c" ;
+     grid-gap: 30px 30px;
+
+}
+section{
+    width: 23.66em;
+    height: 16.86em;
+    box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.096);
+    border-radius: 5px 5px 10px 10px;
+    border-top: 4px inset black;
+    
+    
+    
+}
+section img{
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+section h2{
+    margin-left: 30px;
+}
+section p{
+    margin-left: 30px;
+    width: 300px;
+}
+#TeamBuilder{
+    border-color: var(--color-red);
+    grid-area: b;
+    
+    
+}
+#Supervisor{
+    border-color: var(--color-cyan);
+    grid-area: a;
+}
+#Karma{
+ border-color: var(--color-orange);
+ grid-area: d;
+}
+#Calculator{
+  border-color:var(--color-blue);
+  grid-area: c;
+}
+@media all and (max-width:699px){
+ main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ header p{
+    width: 70%;
+    text-align: justify;
+    margin-left: 70px;
+ }
+ #Calculator{
+    margin-bottom: 50px;
+ }
+
+
+
+}
